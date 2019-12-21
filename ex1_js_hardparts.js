@@ -20,7 +20,13 @@ console.log(addS('bagel'));
 
 // Challenge 3
 function map(array, callback) {
-  return array.map(callback);
+  const result = [];
+
+  for(let i = 0; i < array.length; i++) {
+    result.push(callback(array[i], i, array));
+  }
+
+  return result;
 }
 
 console.log(map([1, 2, 3], addTwo));
@@ -28,7 +34,9 @@ console.log(map([1, 2, 3], addTwo));
 
 // Challenge 4
 function forEach(array, callback) {
-  array.forEach(callback)
+  for(let i = 0; i < array.length; i++) {
+    callback(array[i], i, array);
+  }
 }
 
 // see for yourself if your forEach works!
@@ -43,7 +51,11 @@ console.log(alphabet);
 
 //Extension 1
 function mapWith(array, callback) {
+  const result = [];
 
+  forEach(array, value => { result.push(callback(value)); });
+
+  return result;
 }
 
 //Extension 2
