@@ -66,12 +66,11 @@ console.log(addByTwo(2));
 //--------------------------------------------------
 
 function once(func) {
-  let savedCallback = func;
   let savedValue = null;
 
   return (newValue) => {
     savedValue = savedValue || newValue;
-    return savedCallback(savedValue);
+    return func(savedValue);
   }
 }
 
