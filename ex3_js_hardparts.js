@@ -21,8 +21,6 @@ console.log('End of Challenge 1');
 // */// (do not alter this line)
 
 
-
-
 /////////////////
 //             //
 // CHALLENGE 2 //
@@ -33,7 +31,24 @@ console.log('End of Challenge 1');
 console.log('Start of Challenge 2');
 // ...your code below
 
+// First approach
+// setInterval(()=>{ console.log('Interval hello'); }, 2000);
 
+// Second approach, stopped trying each ID
+// var seconds = 0;
+// let intervalId = setInterval(() => {
+//  seconds++;
+//  if (seconds == 10) clearAllIntervals();
+//  console.log('Interval Hello!');
+// }, 1000)
+
+// Third approach, stopped by ID
+ var seconds = 0;
+ let intervalId = setInterval(() => {
+  seconds++;
+  if (seconds == 10) clearInterval(intervalId);
+  console.log('Interval Hello!');
+ }, 1000)
 
 
 // ...your code above
