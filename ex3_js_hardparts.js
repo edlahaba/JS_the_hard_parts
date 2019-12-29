@@ -118,9 +118,20 @@ console.log('End of Challenge 3');
 console.log('Start of Challenge 4');
 // ...your code below
 
+let delays = [2000, 5000, 0, 3500];
 
+let foreach = (arr, cb) => {
+  for(let i = 0; i <= arr.length; i++) {
+    console.log('adas');
+    cb(arr[i], i);
+  }
+}
 
+let delayLog = (item, index) => {
+  setTimeout(() => { console.log('printing element' + index); }, item);
+}
 
+foreach(delays, delayLog);
 
 console.log('End of Challenge 4');
 // */// (do not alter this line)
