@@ -87,6 +87,20 @@ function everyXsecsForYsecs(func, interval, endTime) {
   })();
 }
 
+everyXsecsForYsecs(sayHowdy, 1, 5);
+
+// SECOND APPROACH WITH setTimeout
+let sayHowdy = () => {
+  console.log('Howdy');
+}
+
+function everyXsecsForYsecs(func, interval, endTime) {
+ for(let i = 1; i <= endTime; i++){
+   if(i % interval === 0) setTimeout(func, i * 1000);
+ }
+}
+
+everyXsecsForYsecs(sayHowdy, 1, 5);
 
 console.log('End of Challenge 3');
 // */// (do not alter this line)
