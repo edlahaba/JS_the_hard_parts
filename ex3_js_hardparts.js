@@ -72,8 +72,20 @@ console.log('End of Challenge 2');
 console.log('Start of Challenge 3');
 // ...your code below
 
+let sayHowdy = () => {
+  console.log('Howdy');
+}
 
+function everyXsecsForYsecs(func, interval, endTime) {
 
+  (() => {
+    let intervalId = setInterval(() => {
+      endTime--;
+      if(!endTime) clearInterval(intervalId);
+      func();
+    }, interval * 1000);
+  })();
+}
 
 
 console.log('End of Challenge 3');
