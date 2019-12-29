@@ -5,7 +5,7 @@ window.onload = () => {
     cl.addEventListener(eventName, cb);
   }
 
-  let test = (event) => {
+  let activate = (event) => {
     console.log('clicked #2');
     changeColour();
   }
@@ -21,6 +21,6 @@ window.onload = () => {
 
   addEventTo('activate', 'click', () => {
     console.log('clicked #1');
-    addEventTo('color','click', test);
+    addEventTo('color','click', activate);
   });
 }
