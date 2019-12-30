@@ -15,17 +15,18 @@ const ezDOM = (selector) => {
       el: element,
       attr: (name, value) => {
         element.setAttribute(name, value);
+
         return ezObj;
       },
       in: (element) => {
         if(typeof element === 'string') element = ezDOM(element).el
-
         element.appendChild(ezObj.el);
+
         return ezObj;
       },
       text: (string) => {
-        let textElement = document.createTextNode(string);
-        ezDOM(textElement).in(element);
+        ezDOM(document.createTextNode(string)).in(element);
+
         return ezObj;
       },
       ezGet: (url, sucess, fail) => {
@@ -50,6 +51,7 @@ const ezDOM = (selector) => {
 const addVenues = (data) => {
   const venueNames = data.map(eventObj => { return eventObj.venue.name });
   const ul = ezDOM('ul').attr('list').in('ch3');
+
   venueNames.forEach(venueName => { ezDOM('li').text(venueName).in(ul.el);  });
 }
 

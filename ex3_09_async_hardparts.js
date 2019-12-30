@@ -15,16 +15,18 @@ const ezDOM = (selector) => {
       el: element,
       attr: (name, value) => {
         element.setAttribute(name, value);
+
         return ezObj;
       },
       in: (element) => {
         if(typeof element === 'string') element = ezDOM(element).el
-
         element.appendChild(ezObj.el);
+
         return ezObj;
       },
       text: (string) => {
         ezDOM(document.createTextNode(string)).in(element);
+
         return ezObj;
       },
       ezGet: (url, sucess, fail) => {

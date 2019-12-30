@@ -9,12 +9,13 @@ const ezDOM = (selector) => {
       el: element,
       attr: (name, value) => {
         element.setAttribute(name, value);
+
         return ezObj;
       },
       in: (element) => {
         if(!(element instanceof Element)) element = ezDOM(element).el
-
         element.appendChild(ezObj.el);
+
         return ezObj;
       },
       ezGet: (url, sucess, fail) => {
