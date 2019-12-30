@@ -4,7 +4,7 @@ const ezDOM = (selector) => {
   if(typeof selector === 'object') {
     element = selector;
   } else {
-   element = document.getElementById(selector) || document.createElement(selector);
+    element = document.getElementById(selector) || document.createElement(selector);
   }
 
   var ezObj = (() => {
