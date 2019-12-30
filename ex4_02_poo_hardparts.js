@@ -27,7 +27,6 @@ sandra.greet(); //-> Logs 'hello'
 // Without editing the code you've already written, add an introduce method to the personStore
 // object that logs "Hi, my name is [name]".
 
-
 sandra = Object.create(sandra, {
   introduce: {
     value: () => { console.log(`Hi! my name is ${sandra.name}`); }
