@@ -29,7 +29,7 @@ sandra.greet(); //-> Logs 'hello'
 
 sandra = Object.create(sandra, {
   introduce: {
-    value: function() { console.log(`Hi! my name is ${sandra.name}`); }
+    value: function() { console.log(`Hi! my name is ${this.name}`); }
   }
 });
 
