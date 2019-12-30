@@ -24,8 +24,7 @@ const ezDOM = (selector) => {
         return ezObj;
       },
       text: (string) => {
-        let textElement = document.createTextNode(string);
-        ezDOM(textElement).in(element);
+        ezDOM(document.createTextNode(string)).in(element);
         return ezObj;
       },
       ezGet: (url, sucess, fail) => {
