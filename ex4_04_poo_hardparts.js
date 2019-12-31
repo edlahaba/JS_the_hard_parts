@@ -3,9 +3,9 @@
 // greet that logs the string 'hello'.
 
 class PersonClass {
-	constructor(name) {
-		this.name = name;
-	}
+  constructor(name) {
+    this.name = name;
+  }
 
   greet() {
     console.log('Hello')
@@ -20,7 +20,7 @@ george.greet(); // -> Logs 'hello'
 // introduce method. When called, introduce should log the string 'Hello World, my name is [name]'
 
 class DeveloperClass extends PersonClass {
-	introduce() {
+  introduce() {
     console.log(`Hello World, my name is ${this.name}`);
   }
 }
